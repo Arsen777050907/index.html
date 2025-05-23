@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Купити курс</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f2f5;
+      margin: 0;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      background-color: #0088cc;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #0077b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎓 Онлайн-курс: Python для початківців</h1>
+  <button onclick="buyCourse()">Купити за 50 ⭐️</button>
+
+  <script>
+    function buyCourse() {
+      if (window.Telegram.WebApp) {
+        Telegram.WebApp.sendData("buy_python_course");
+      } else {
+        alert("Цю сторінку потрібно відкривати через Telegram WebApp.");
+      }
+    }
+  </script>
+</body>
+</html>
